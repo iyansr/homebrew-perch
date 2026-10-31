@@ -1,8 +1,8 @@
 cask "perch" do
   # Scripts/render-cask.sh fills in `version` and `sha256`; the release workflow pushes the result to
   # the iyansr/homebrew-perch tap. Edit this file, not the tap's copy. See docs/release.md.
-  version "0.1.1"
-  sha256 "a1e9abbb220df8e07cafd68e5fd29729ed05d4528910d30d01440280bcd04dd9"
+  version "0.1.4"
+  sha256 "97af7a9db3d8e23ad33b116617897b638734597bc383928e7e829eced9af6161"
 
   url "https://github.com/iyansr/Perch/releases/download/v#{version}/Perch-#{version}.dmg"
   name "Perch"
@@ -13,6 +13,10 @@ cask "perch" do
     url :url
     strategy :github_latest
   end
+
+  # Perch updates itself after the user approves; this makes a plain `brew upgrade` normally skip it.
+  # Naming the cask or passing --greedy still upgrades it. See docs/release.md.
+  auto_updates true
 
   depends_on macos: :tahoe
 
