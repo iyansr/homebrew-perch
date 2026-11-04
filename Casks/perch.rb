@@ -1,8 +1,8 @@
 cask "perch" do
   # Scripts/render-cask.sh fills in `version` and `sha256`; the release workflow pushes the result to
   # the iyansr/homebrew-perch tap. Edit this file, not the tap's copy. See docs/release.md.
-  version "0.2.0"
-  sha256 "3dfffd533e076ec0e7b67c8f038a7834866edd9c874b972701c7535227f502d1"
+  version "0.3.0"
+  sha256 "cce2942c5ff536f867f7d401a4fa472808c3cafbb29b9835d339e2ebf291e078"
 
   url "https://github.com/iyansr/Perch/releases/download/v#{version}/Perch-#{version}.dmg"
   name "Perch"
